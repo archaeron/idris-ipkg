@@ -1,0 +1,15 @@
+package idris2
+
+-- a module
+modules =
+    Algebra,
+    Algebra.Preorder,
+    Yaffle.REPL
+
+-- depending on things
+depends = contrib, network
+
+sourcedir = "src"
+
+main = Idris.Main
+executable = idris2

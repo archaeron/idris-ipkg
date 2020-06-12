@@ -14,4 +14,10 @@ describe('lesing', () => {
         const lexemes = lex(ipkgContents)
         expect(tokensToString(lexemes)).toStrictEqual(ipkgContents)
     })
+
+    test('with_comments.ipkg', () => {
+        const ipkgContents = readFile('./with_comments.ipkg')
+        const lexemes = lex(ipkgContents)
+        expect(tokensToString(lexemes)).toStrictEqual(ipkgContents)
+    })
 })
