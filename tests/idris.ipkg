@@ -10,34 +10,6 @@ modules =
 
     Compiler.VMCode,
 
-    Core.UnifyState,
-    Core.Value,
-
-    Data.StringTrie,
-
-    IdrisPaths,
-
-    Idris.CommandLine,
-    Idris.Desugar,
-    Idris.Elab.Implementation,
-    Idris.Elab.Interface,
-
-    Parser.Lexer.Common,
-    Parser.Lexer.Package,
-    Parser.Lexer.Source,
-
-    Text.Lexer,,
-    Text.Token,
-
-    TTImp.BindImplicits,
-    TTImp.Elab,
-    TTImp.Elab.Ambiguity,
-    TTImp.Elab.App,
-
-
-    Utils.Binary,
-    Utils.Hex,
-    Utils.Octal,
     Utils.Shunting,
     Utils.String,
     Utils.Path,

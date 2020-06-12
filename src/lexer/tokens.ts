@@ -3,9 +3,9 @@ export type CommentToken = {
     comment: string
 }
 export type EqualsToken = { tokenType: 'equals' }
-export type DotSepIdentToken = {
-    tokenType: 'dot-sep-ident'
-    identifier: Array<string>
+export type IdentToken = {
+    tokenType: 'ident'
+    identifier: string
 }
 export type SeparatorToken = { tokenType: 'separator' }
 export type SpaceToken = { tokenType: 'space' }
@@ -18,7 +18,7 @@ export type StringLitToken = {
 export type Token =
     | CommentToken
     | EqualsToken
-    | DotSepIdentToken
+    | IdentToken
     | SeparatorToken
     | SpaceToken
     | NewLineToken

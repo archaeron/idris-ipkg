@@ -1,6 +1,6 @@
 import { Token } from './tokens'
 
-export const lex = (inp: string): Array<Token> => {
+export const lexFull = (inp: string): Array<Token> => {
     let pos = 0
     let tokens: Token[] = []
     const inpLength = inp.length
@@ -73,12 +73,28 @@ export const lex = (inp: string): Array<Token> => {
                     pos += 1
                 }
                 tokens.push({
-                    tokenType: 'dot-sep-ident',
-                    identifier: inp.slice(start, pos).split('.'),
+                    tokenType: 'ident',
+                    identifier: inp.slice(start, pos),
                 })
                 break
             }
         }
     }
     return tokens
+}
+
+export const lex = (inp: string): Array<Token> => {
+    return lexFull(inp).filter(useful)
+}
+
+const useful = (tok: Token): boolean => {
+    switch (tok.tokenType) {
+        case 'comment':
+        case 'space': {
+            return false
+        }
+        default: {
+            return true
+        }
+    }
 }

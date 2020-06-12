@@ -28,8 +28,8 @@ export function tokensToString(tokens: Array<Token>) {
                 s += `"${token.string}"`
                 break
             }
-            case 'dot-sep-ident': {
-                s += token.identifier.join('.')
+            case 'ident': {
+                s += token.identifier
                 break
             }
         }
