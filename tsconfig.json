@@ -2,12 +2,13 @@
     "compilerOptions": {
         "forceConsistentCasingInFileNames": true,
         "importHelpers": true,
+        "declaration": true,
         "jsx": "react",
         "lib": ["es7", "dom", "ES2017.object"],
         "module": "commonjs",
         "esModuleInterop": true,
         "noLib": false,
-        "outDir": "../dist",
+        "outDir": "./dist",
         "preserveConstEnums": true,
         "skipLibCheck": false,
         "sourceMap": true,
@@ -21,5 +22,6 @@
         "plugins": [{ "name": "typescript-tslint-plugin" }],
         "newLine": "LF"
     },
+    "include": ["src/**/*"],
     "compileOnSave": true
 }

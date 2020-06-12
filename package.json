@@ -2,7 +2,7 @@
     "name": "idris-ipkg",
     "version": "0.0.1",
     "description": "working with Idris IPKG files",
-    "main": "index.js",
+    "main": "dist/index.js",
     "author": "",
     "license": "MIT",
     "repository": {
@@ -10,7 +10,7 @@
         "url": "https://github.com/archaeron/idris-ipkg"
     },
     "scripts": {
-        "build": "tsc -p ./ && rm -r build/test",
+        "build": "tsc -p ./",
         "prepublishOnly": "npm run build",
         "test": "jest",
         "watch": "tsc -watch -p ./"
