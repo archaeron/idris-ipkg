@@ -1,5 +1,8 @@
 import { Token } from './tokens'
 
+/**
+ * Convert an array of tokens back to the original input.
+ */
 export function tokensToString(tokens: Array<Token>) {
     let s = ''
     for (const token of tokens) {

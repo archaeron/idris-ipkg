@@ -1,5 +1,10 @@
 import { Token } from './tokens'
 
+/**
+ * Lex the input string into an array of tokens that
+ * can be printed out to the original again.
+ * If you only want the useful tokens, use the `lex` function.
+ */
 export const lexFull = (inp: string): Array<Token> => {
     let pos = 0
     let tokens: Token[] = []
@@ -83,6 +88,9 @@ export const lexFull = (inp: string): Array<Token> => {
     return tokens
 }
 
+/**
+ * Lex the input but only keep the useful tokens.
+ */
 export const lex = (inp: string): Array<Token> => {
     return lexFull(inp).filter(useful)
 }
