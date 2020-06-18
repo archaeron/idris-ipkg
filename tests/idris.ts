@@ -10,20 +10,11 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'modules',
         tokenType: 'ident',
     },
     {
         tokenType: 'equals',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Algebra',
@@ -33,17 +24,11 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Algebra.Preorder',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Algebra.Semiring',
@@ -53,20 +38,11 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Algebra.ZeroOneOmega',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Compiler.ANF',
@@ -76,23 +52,11 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Compiler.VMCode',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Utils.Shunting',
@@ -102,17 +66,11 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Utils.String',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Utils.Path',
@@ -122,12 +80,6 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Yaffle.Main',
         tokenType: 'ident',
     },
@@ -135,17 +87,8 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Yaffle.REPL',
         tokenType: 'ident',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'depends',
@@ -166,12 +109,6 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'sourcedir',
         tokenType: 'ident',
     },
@@ -181,12 +118,6 @@ export const idrisTokens: Array<UsefulToken> = [
     {
         string: 'src',
         tokenType: 'string-lit',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'main',
@@ -200,9 +131,6 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'executable',
         tokenType: 'ident',
     },
@@ -212,8 +140,5 @@ export const idrisTokens: Array<UsefulToken> = [
     {
         identifier: 'idris2',
         tokenType: 'ident',
-    },
-    {
-        tokenType: 'new-line',
     },
 ]

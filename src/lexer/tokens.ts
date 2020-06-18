@@ -28,5 +28,4 @@ export type UsefulToken =
     | EqualsToken
     | IdentToken
     | SeparatorToken
-    | NewLineToken
     | StringLitToken

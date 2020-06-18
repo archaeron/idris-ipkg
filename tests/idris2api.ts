@@ -10,20 +10,11 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'modules',
         tokenType: 'ident',
     },
     {
         tokenType: 'equals',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Algebra',
@@ -33,17 +24,11 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Algebra.Preorder',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Algebra.Semiring',
@@ -53,20 +38,11 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Algebra.ZeroOneOmega',
         tokenType: 'ident',
     },
     {
         tokenType: 'separator',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Utils.Path',
@@ -76,12 +52,6 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Yaffle.Main',
         tokenType: 'ident',
     },
@@ -89,17 +59,8 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Yaffle.REPL',
         tokenType: 'ident',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'depends',
@@ -120,12 +81,6 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'sourcedir',
         tokenType: 'ident',
     },
@@ -135,8 +90,5 @@ export const idris2ApiTokens: Array<UsefulToken> = [
     {
         string: 'src',
         tokenType: 'string-lit',
-    },
-    {
-        tokenType: 'new-line',
     },
 ]
