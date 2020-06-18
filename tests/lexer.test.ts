@@ -23,6 +23,13 @@ describe('full lexing', () => {
         const tokens = lex(ipkgContents)
         expect(tokensToString(tokens)).toStrictEqual(ipkgContents)
     })
+
+    test("shouldn't crash and should terminate on a non-ipkg file", () => {
+        const ipkgContents = readFile('./Algebra.idr')
+        const tokens = lex(ipkgContents)
+        expect(tokens).toBeInstanceOf(Array)
+        expect(tokens.length).toBeGreaterThan(0)
+    })
 })
 
 describe('lexing', () => {
@@ -45,5 +52,13 @@ describe('lexing', () => {
         const tokens = lex(ipkgContents)
         const usefulTokens = toUsefulTokens(tokens)
         expect(usefulTokens).toStrictEqual(withCommentsTokens)
+    })
+
+    test("shouldn't crash and should terminate on a non-ipkg file", () => {
+        const ipkgContents = readFile('./Algebra.idr')
+        const tokens = lex(ipkgContents)
+        const usefulTokens = toUsefulTokens(tokens)
+        expect(usefulTokens).toBeInstanceOf(Array)
+        expect(usefulTokens.length).toBeGreaterThan(0)
     })
 })
