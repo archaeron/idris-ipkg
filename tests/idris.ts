@@ -1,4 +1,4 @@
-import { UsefulToken } from '../src/index'
+import { UsefulToken, Package } from '../src/index'
 
 export const idrisTokens: Array<UsefulToken> = [
     {
@@ -142,3 +142,62 @@ export const idrisTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
 ]
+
+export const idrisPackage: Package = {
+    name: 'idris2',
+    fields: [
+        {
+            name: 'modules',
+            values: [
+                { fieldType: 'identifier', identifier: 'Algebra' },
+                { fieldType: 'identifier', identifier: 'Algebra.Preorder' },
+                { fieldType: 'identifier', identifier: 'Algebra.Semiring' },
+                {
+                    fieldType: 'identifier',
+                    identifier: 'Algebra.ZeroOneOmega',
+                },
+                { fieldType: 'identifier', identifier: 'Compiler.ANF' },
+                { fieldType: 'identifier', identifier: 'Compiler.VMCode' },
+                { fieldType: 'identifier', identifier: 'Utils.Shunting' },
+                { fieldType: 'identifier', identifier: 'Utils.String' },
+                { fieldType: 'identifier', identifier: 'Utils.Path' },
+                { fieldType: 'identifier', identifier: 'Yaffle.Main' },
+                { fieldType: 'identifier', identifier: 'Yaffle.REPL' },
+            ],
+        },
+        {
+            name: 'depends',
+            values: [
+                { fieldType: 'identifier', identifier: 'contrib' },
+                { fieldType: 'identifier', identifier: 'network' },
+            ],
+        },
+        {
+            name: 'sourcedir',
+            values: [
+                {
+                    fieldType: 'text',
+                    text: 'src',
+                },
+            ],
+        },
+        {
+            name: 'main',
+            values: [
+                {
+                    fieldType: 'identifier',
+                    identifier: 'Idris.Main',
+                },
+            ],
+        },
+        {
+            name: 'executable',
+            values: [
+                {
+                    fieldType: 'identifier',
+                    identifier: 'idris2',
+                },
+            ],
+        },
+    ],
+}

@@ -1,4 +1,4 @@
-import { UsefulToken } from '../src/index'
+import { UsefulToken, Package } from '../src/index'
 
 export const withCommentsTokens: Array<UsefulToken> = [
     {
@@ -86,3 +86,51 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
 ]
+
+export const withCommentsPackage: Package = {
+    name: 'idris2',
+    fields: [
+        {
+            name: 'modules',
+            values: [
+                { fieldType: 'identifier', identifier: 'Algebra' },
+                { fieldType: 'identifier', identifier: 'Algebra.Preorder' },
+                { fieldType: 'identifier', identifier: 'Yaffle.REPL' },
+            ],
+        },
+        {
+            name: 'depends',
+            values: [
+                { fieldType: 'identifier', identifier: 'contrib' },
+                { fieldType: 'identifier', identifier: 'network' },
+            ],
+        },
+        {
+            name: 'sourcedir',
+            values: [
+                {
+                    fieldType: 'text',
+                    text: 'src',
+                },
+            ],
+        },
+        {
+            name: 'main',
+            values: [
+                {
+                    fieldType: 'identifier',
+                    identifier: 'Idris.Main',
+                },
+            ],
+        },
+        {
+            name: 'executable',
+            values: [
+                {
+                    fieldType: 'identifier',
+                    identifier: 'idris2',
+                },
+            ],
+        },
+    ],
+}

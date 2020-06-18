@@ -1,4 +1,4 @@
-import { UsefulToken } from '../src/index'
+import { UsefulToken, Package } from '../src/index'
 
 export const idris2ApiTokens: Array<UsefulToken> = [
     {
@@ -92,3 +92,40 @@ export const idris2ApiTokens: Array<UsefulToken> = [
         tokenType: 'string-lit',
     },
 ]
+
+export const idris2ApiPackage: Package = {
+    name: 'idris2',
+    fields: [
+        {
+            name: 'modules',
+            values: [
+                { fieldType: 'identifier', identifier: 'Algebra' },
+                { fieldType: 'identifier', identifier: 'Algebra.Preorder' },
+                { fieldType: 'identifier', identifier: 'Algebra.Semiring' },
+                {
+                    fieldType: 'identifier',
+                    identifier: 'Algebra.ZeroOneOmega',
+                },
+                { fieldType: 'identifier', identifier: 'Utils.Path' },
+                { fieldType: 'identifier', identifier: 'Yaffle.Main' },
+                { fieldType: 'identifier', identifier: 'Yaffle.REPL' },
+            ],
+        },
+        {
+            name: 'depends',
+            values: [
+                { fieldType: 'identifier', identifier: 'contrib' },
+                { fieldType: 'identifier', identifier: 'network' },
+            ],
+        },
+        {
+            name: 'sourcedir',
+            values: [
+                {
+                    fieldType: 'text',
+                    text: 'src',
+                },
+            ],
+        },
+    ],
+}
