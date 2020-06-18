@@ -30,6 +30,13 @@ describe('full lexing', () => {
         expect(tokens).toBeInstanceOf(Array)
         expect(tokens.length).toBeGreaterThan(0)
     })
+
+    test('should terminate on unbalanced quotes', () => {
+        const ipkgContents = readFile('./unbalanced_quotes.ipkg')
+        const tokens = lex(ipkgContents)
+        expect(tokens).toBeInstanceOf(Array)
+        expect(tokens.length).toBeGreaterThan(0)
+    })
 })
 
 describe('lexing', () => {
@@ -56,6 +63,14 @@ describe('lexing', () => {
 
     test("shouldn't crash and should terminate on a non-ipkg file", () => {
         const ipkgContents = readFile('./Algebra.idr')
+        const tokens = lex(ipkgContents)
+        const usefulTokens = toUsefulTokens(tokens)
+        expect(usefulTokens).toBeInstanceOf(Array)
+        expect(usefulTokens.length).toBeGreaterThan(0)
+    })
+
+    test('invalid values', () => {
+        const ipkgContents = readFile('./invalid_values.ipkg')
         const tokens = lex(ipkgContents)
         const usefulTokens = toUsefulTokens(tokens)
         expect(usefulTokens).toBeInstanceOf(Array)
