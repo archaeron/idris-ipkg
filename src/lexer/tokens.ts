@@ -23,3 +23,10 @@ export type Token =
     | SpaceToken
     | NewLineToken
     | StringLitToken
+
+export type UsefulToken =
+    | EqualsToken
+    | IdentToken
+    | SeparatorToken
+    | NewLineToken
+    | StringLitToken

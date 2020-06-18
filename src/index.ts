@@ -7,6 +7,7 @@ export {
     NewLineToken,
     StringLitToken,
     Token,
+    UsefulToken,
 } from './lexer/tokens'
-export { lex, lexFull } from './lexer/lexer'
+export { lex, toUsefulTokens } from './lexer/lexer'
 export { tokensToString } from './lexer/to-string'

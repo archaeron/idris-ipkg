@@ -1,6 +1,6 @@
-import { Token } from '../src/index'
+import { UsefulToken } from '../src/index'
 
-export const idris2ApiTokens: Array<Token> = [
+export const idris2ApiTokens: Array<UsefulToken> = [
     {
         identifier: 'package',
         tokenType: 'ident',

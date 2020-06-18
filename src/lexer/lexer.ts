@@ -1,11 +1,11 @@
-import { Token } from './tokens'
+import { Token, UsefulToken } from './tokens'
 
 /**
  * Lex the input string into an array of tokens that
  * can be printed out to the original again.
  * If you only want the useful tokens, use the `lex` function.
  */
-export const lexFull = (inp: string): Array<Token> => {
+export const lex = (inp: string): Array<Token> => {
     let pos = 0
     let tokens: Token[] = []
     const inpLength = inp.length
@@ -91,18 +91,22 @@ export const lexFull = (inp: string): Array<Token> => {
 /**
  * Lex the input but only keep the useful tokens.
  */
-export const lex = (inp: string): Array<Token> => {
-    return lexFull(inp).filter(useful)
-}
-
-const useful = (tok: Token): boolean => {
-    switch (tok.tokenType) {
-        case 'comment':
-        case 'space': {
-            return false
-        }
-        default: {
-            return true
+export const toUsefulTokens = (tokens: Array<Token>): Array<UsefulToken> => {
+    var usefulTokens: Array<UsefulToken> = []
+    for (const token of tokens) {
+        switch (token.tokenType) {
+            case 'equals':
+            case 'ident':
+            case 'new-line':
+            case 'separator':
+            case 'string-lit': {
+                usefulTokens.push(token)
+                continue
+            }
+            default: {
+                continue
+            }
         }
     }
+    return usefulTokens
 }
