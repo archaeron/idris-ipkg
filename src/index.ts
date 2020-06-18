@@ -17,5 +17,7 @@ export {
     FieldValues,
     Field,
     Package,
+    PkgDesc,
 } from './parser/ipkg'
-export { parsePackage } from './parser/parse'
+export { parsePackage, pkgDescFromPackage } from './parser/parse'
+export { parseIpkgFile } from './parse'

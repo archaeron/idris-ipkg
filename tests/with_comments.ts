@@ -1,4 +1,4 @@
-import { UsefulToken, Package } from '../src/index'
+import { UsefulToken, Package, PkgDesc } from '../src/index'
 
 export const withCommentsTokens: Array<UsefulToken> = [
     {
@@ -133,4 +133,22 @@ export const withCommentsPackage: Package = {
             ],
         },
     ],
+}
+
+export const withCommentsPackageDescription: PkgDesc = {
+    name: 'idris2',
+    version: undefined,
+    authors: undefined,
+    maintainers: undefined,
+    license: undefined,
+    brief: undefined,
+    readme: undefined,
+    homepage: undefined,
+    sourceloc: undefined,
+    bugtracker: undefined,
+    depends: ['contrib', 'network'],
+    modules: ['Algebra', 'Algebra.Preorder', 'Yaffle.REPL'],
+    main: 'Idris.Main',
+    executable: 'idris2',
+    sourcedir: 'src',
 }
