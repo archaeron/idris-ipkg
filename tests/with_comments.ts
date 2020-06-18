@@ -1,6 +1,6 @@
-import { UsefulTokens } from '../src/index'
+import { UsefulToken } from '../src/index'
 
-export const withCommentsTokens: Array<UsefulTokens> = [
+export const withCommentsTokens: Array<UsefulToken> = [
     {
         identifier: 'package',
         tokenType: 'ident',
