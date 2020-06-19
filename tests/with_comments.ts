@@ -10,23 +10,11 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'modules',
         tokenType: 'ident',
     },
     {
         tokenType: 'equals',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'Algebra',
@@ -36,9 +24,6 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Algebra.Preorder',
         tokenType: 'ident',
     },
@@ -46,20 +31,8 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'separator',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'Yaffle.REPL',
         tokenType: 'ident',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'depends',
@@ -80,12 +53,6 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'sourcedir',
         tokenType: 'ident',
     },
@@ -95,12 +62,6 @@ export const withCommentsTokens: Array<UsefulToken> = [
     {
         string: 'src',
         tokenType: 'string-lit',
-    },
-    {
-        tokenType: 'new-line',
-    },
-    {
-        tokenType: 'new-line',
     },
     {
         identifier: 'main',
@@ -114,9 +75,6 @@ export const withCommentsTokens: Array<UsefulToken> = [
         tokenType: 'ident',
     },
     {
-        tokenType: 'new-line',
-    },
-    {
         identifier: 'executable',
         tokenType: 'ident',
     },
@@ -126,8 +84,5 @@ export const withCommentsTokens: Array<UsefulToken> = [
     {
         identifier: 'idris2',
         tokenType: 'ident',
-    },
-    {
-        tokenType: 'new-line',
     },
 ]

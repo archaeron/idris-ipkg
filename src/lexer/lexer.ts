@@ -97,7 +97,6 @@ export const toUsefulTokens = (tokens: Array<Token>): Array<UsefulToken> => {
         switch (token.tokenType) {
             case 'equals':
             case 'ident':
-            case 'new-line':
             case 'separator':
             case 'string-lit': {
                 usefulTokens.push(token)
