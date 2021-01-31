@@ -1,5 +1,12 @@
 import { UsefulToken } from '../lexer/tokens'
-import { TextField, IdentifierField, FieldValues, Field, Package } from './ipkg'
+import {
+    TextField,
+    IdentifierField,
+    FieldValues,
+    Field,
+    Package,
+    PkgDesc,
+} from './ipkg'
 import { tokensToString } from '../lexer/to-string'
 
 export type ParseSuccess<T> = { resultType: 'success'; value: T }
@@ -200,5 +207,95 @@ export function parsePackage(tokens: Array<UsefulToken>): ParseResult<Package> {
         }
     } else {
         return packageNameResult
+    }
+}
+
+//------------------------------------------------------------------------------
+// PkgDesc
+//------------------------------------------------------------------------------
+
+type Options = { [name: string]: FieldValues }
+
+function identValue(options: Options, name: string): string | undefined {
+    const os = options[name]
+    if (os && os.length === 1) {
+        const option = os[0]
+        if (option && option.fieldType === 'identifier') {
+            return option.identifier
+        }
+    }
+    return undefined
+}
+
+function stringValue(options: Options, name: string): string | undefined {
+    const os = options[name]
+    if (os && os.length === 1) {
+        const option = os[0]
+        if (option && option.fieldType === 'text') {
+            return option.text
+        }
+    }
+    return undefined
+}
+
+function stringOrIdentValue(
+    options: Options,
+    name: string,
+): string | undefined {
+    const os = options[name]
+    if (os && os.length === 1) {
+        const option = os[0]
+        if (option && option.fieldType === 'text') {
+            return option.text
+        }
+        if (option && option.fieldType === 'identifier') {
+            return option.identifier
+        }
+    }
+    return undefined
+}
+
+function identValues(options: Options, name: string): Array<string> {
+    const os = options[name]
+    if (os) {
+        return os.map((value) => {
+            switch (value.fieldType) {
+                case 'identifier': {
+                    return value.identifier
+                }
+                case 'text': {
+                    return value.text
+                }
+            }
+        })
+    }
+    return []
+}
+
+export function pkgDescFromPackage(ipkg: Package): ParseResult<PkgDesc> {
+    var options: Options = {}
+    for (const option of ipkg.fields) {
+        options[option.name] = option.values
+    }
+    var pkgDesc: PkgDesc = {
+        name: ipkg.name,
+        version: stringValue(options, 'version'),
+        authors: stringValue(options, 'authors'),
+        maintainers: stringValue(options, 'maintainers'),
+        license: stringValue(options, 'license'),
+        brief: stringValue(options, 'brief'),
+        readme: stringValue(options, 'readme'),
+        homepage: stringValue(options, 'homepage'),
+        sourceloc: stringValue(options, 'sourceloc'),
+        bugtracker: stringValue(options, 'bugtracker'),
+        depends: identValues(options, 'depends'),
+        modules: identValues(options, 'modules'),
+        main: identValue(options, 'main'),
+        executable: stringOrIdentValue(options, 'executable'),
+        sourcedir: stringValue(options, 'sourcedir'),
+    }
+    return {
+        resultType: 'success',
+        value: pkgDesc,
     }
 }
